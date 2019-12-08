@@ -10,5 +10,6 @@ randomPassword="$(pwgen 13 1)"
 sudo -u postgres psql -c "CREATE USER laraveluser WITH PASSWORD '${randomPassword}' superuser CREATEDB;"
 sudo -u postgres psql -c "CREATE DATABASE laravel"
 sudo -u postgres psql -c "grant all privileges on database laravel to laraveluser"
+cp /vagrant/src/api/.env.example /vagrant/src/api/.env
 sed -i "s/SET_DB_PASSWORD/${randomPassword}/g" /vagrant/src/api/.env
 php /vagrant/src/api/artisan migrate:fresh

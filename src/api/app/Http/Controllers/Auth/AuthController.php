@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Class AuthController
+ *
+ * Base Controller for authentication
+ */
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;

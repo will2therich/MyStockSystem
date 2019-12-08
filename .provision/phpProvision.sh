@@ -13,3 +13,5 @@ mv composer.phar /usr/local/bin/composer
 php -r "unlink('composer-setup.php');"
 sudo su
 apt install redis-server -y
+cd /vagrant/src/api || exit
+composer install

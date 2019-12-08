@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Class EmailVerification
+ *
+ * A Class for email verification emails
+ */
 namespace App\Mail;
 
 use Facade\Ignition\Support\Packagist\Package;

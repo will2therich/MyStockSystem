@@ -56,13 +56,13 @@ export default {
   methods: {
     submit() {
       let postData = {
-        username: this.email,
-        password: this.password
+        username: this.form.email,
+        password: this.form.password
       };
       let _this = this;
       this.$store.dispatch("authLogin", postData).then(function(success) {
         if (success) {
-          this.$router.push({ name: "home" });
+          _this.$router.push({ name: "home" });
         } else {
           _this.form.failed = true;
         }

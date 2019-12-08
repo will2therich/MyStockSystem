@@ -24,3 +24,12 @@ Route::group([
     Route::post('logout', 'LoginController@logout');
     Route::post('verify/email/{token}', 'EmailVerifyController@verify');
 });
+
+Route::group([
+    'middleware' => 'auth',
+    'prefix' => 'categories',
+    'namespace' => 'Categories'
+], function ($router) {
+    Route::get('/', 'CategoriesController@getAllCategories');
+    Route::post('/', 'CategoriesController@createCategory');
+});

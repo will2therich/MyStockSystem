@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, :path => ".provision/nginxProvision.sh"
   config.vm.provision :shell, :path => ".provision/phpProvision.sh"
   config.vm.provision :shell, :path => ".provision/postgresProvision.sh"
+  config.vm.provision :shell, :path => ".provision/nodeProvision.sh"
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
